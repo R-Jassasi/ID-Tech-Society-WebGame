@@ -17,11 +17,27 @@
     <!-- BG IMAGE -->
     <div class="background-image"></div>
 
-    <!-- ABOUT -->
+    <!-- Notification Popup timed-->
+    <div id="popup-modal-5" class="popup-modal">
+        <div class="popup-content">
+            <button class="close-btn">&times;</button>
+            <h2 class="popup-title">System</h2>
+            <div class="scrollable-content">
+
+                <h3>New Email</h3>
+                <p>You received a new email. It looks urgent, would you like to check it now?</p>
+                <button id="yesButton">Yes</button>
+                <button id="noButton">Maybe Later</button>
+            </div>
+
+        </div>
+    </div>
+
 
     <!-- First popup trigger -->
     <a href="#" class="popup-trigger" data-target="popup-modal-1">
-        <div onclick="animateText(textExample)" class="icons-text font"><img src="./Assets/134146_mail_email_icon (1).png" alt="Icon">
+        <div class="icons-text font"><img
+                src="./Assets/134146_mail_email_icon (1).png" alt="Icon">
             <span>Email</span>
         </div>
     </a>
@@ -33,55 +49,24 @@
             <h2 class="popup-title">Email</h2>
             <div class="scrollable-content">
 
-                <textarea id="textExample" rows="6" cols="60">Hey, this is Rey (Rahil)! A keen eye for details! It started with playing with cameras, writing stories and making lots of PowerPoints as a kid :D Then evolved into developing websites, audio-visual designs, and even 3D worlds. Much of my inspiration comes from my long walks and talks with people! 💻📸🎞️🎮🎨☕️🌼🌳🐱🧠✨
-                </textarea>
-                <button class="button" onclick="animateText(textExample)">RUN THE TYPING!</button>
+                <h3>New evidence</h3>
+                <p>Hi Ms Sue, <br>
+                    <br>
 
-                <script>
-                    function animateText(textArea) {
-                        let text = textArea.value;
-                        let to = text.length,
-                            from = 0;
+                    Mr Fos Feline had assigned me to communicate with you on his behalf. We just found a new piece of
+                    evidence that could work in our favour! Please check the file attached and let me know what you
+                    think ASAP!
+                    <br>
+                    <br>
+                    Regards,<br>
+                    Ms Mavrosh Mittens <br>
+                    Mr Feline’s assistant <br>
+                    FosIsFrawd Ltd
+                </p>
 
-                        animate({
-                            duration: 3000,
-                            timing: bounce,
-                            draw: function (progress) {
-                                let result = (to - from) * progress + from;
-                                textArea.value = text.slice(0, Math.ceil(result))
-                            }
-                        });
-                    }
+                <button id="aiButton">Check information through AI Bot</button>
 
 
-                    function bounce(timeFraction) {
-                        for (let a = 0, b = 1; 1; a += b, b /= 2) {
-                            if (timeFraction >= (7 - 4 * a) / 11) {
-                                return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
-                            }
-                        }
-                    }
-                </script>
-
-                <div style="margin-bottom: 20px;"></div>
-
-                <!-- Hovering image change -->
-                <div style="text-align: center;">
-                    <h4>Experienced in graphic design, creative coding, and web development. Passionate about crafting
-                        3D
-                        experiences and diving into the world of games. I thrive on creativity, weaving tales through
-                        various mediums and always seeking fresh ways to express myself. Let's create wonderful things
-                        together!</h4>
-
-                    <h1>↓↓↓</h1>
-                    <h2>Hover Me!</h2>
-                </div>
-
-                <div class="image-container" data-hover-src="./src/Raheel.jpg"
-                    style="width: 80%; margin-left: auto; margin-right: auto;">
-                    <img src="./src/self-portrait-unfinished.jpeg" alt="Original Image" class="w3-image" width="800px"
-                        height="auto">
-                </div>
             </div>
 
         </div>
@@ -89,7 +74,6 @@
 
 
 
-    <!-- PROJECTS -->
 
     <!-- Second popup trigger -->
     <a href="#" class="popup-trigger" data-target="popup-modal-2">
@@ -105,79 +89,45 @@
             <button class="close-btn">&times;</button>
             <h2 class="popup-title">AI Bot</h2>
             <div class="scrollable-content">
-                <div class="wrapper">
 
-                    <div class="icons-text-window font"><a href="./pianomapping.html"><img
-                                src="./src/piano/piano-pic.jpg" alt="Icon">
-                            <span>Piano Mapping III</span></a>
-                    </div>
+                <!-- Chat bot from botpress.com -->
 
-                    <div class="icons-text-window font"><a href="./cafinto.html"><img
-                                src="./src/cafinto/CAFINTO-LOGO-SYMBOL.jpg" alt="Icon">
-                            <span>CAFINTO</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./dreamlight.html"><img
-                                src="./src/dreamlight/CPC_Threejs.jpg" alt="Icon">
-                            <span>DreamLight Three.js</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./academeal.html"><img
-                                src="./src/academeal/Academeal-Logo-crop.png" alt="Icon">
-                            <span>Academeal App</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./p5js.html"><img src="./src/p5js/Antony_I.png"
-                                alt="Icon">
-                            <span>P5.js Paintings</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./nutrientsmentalhealth.html"><img
-                                src="./src/nutrients/cover-cropped.jpg" alt="Icon">
-                            <span style="font-size: medium;">Nutrients VS Mental Health</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./thecube.html"><img src="./src/cube/front_cropped.jpg"
-                                alt="Icon">
-                            <span>THE CUBE</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./inmyhead.html"><img src="./src/inmyhead/inmyhead.png"
-                                alt="Icon">
-                            <span>In My Head</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href=""><img src="./src/ggj/GlobalGameJamLogo.jpg"
-                                alt="Icon">
-                            <span>Global Game Jam</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./sss.html"><img src="./src/sss/sss-logo.jpg"
-                                alt="Icon">
-                            <span>SSS</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./oho.html"><img src="./src/oho/OHO-logo-cropped.jpg"
-                                alt="Icon">
-                            <span>OHO Bikes</span></a>
-                    </div>
-
-                    <div class="icons-text-window font"><a href="./firstcodedweb.html"><img
-                                src="./src/firstcodedweb/DILATATIONAL_2.png" alt="Icon">
-                            <span>My 1st Coded Web</span></a>
-                    </div>
-
-                </div>
+                    <iframe style="border: none; width: 100%; height: 600px;" srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+            <script>
+              window.botpressWebChat.init({
+                  'composerPlaceholder': 'Talk to me...',
+                  'botConversationDescription': 'This chatbot was built surprisingly fast with Botpress',
+                  'botName': 'AI Bot',
+                  'botId': '8c5ad945-0b48-40e0-930c-ca67ebc1352a',
+                  'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                  'messagingUrl': 'https://messaging.botpress.cloud',
+                  'clientId': '8c5ad945-0b48-40e0-930c-ca67ebc1352a',
+                  'enableConversationDeletion': true,
+                  'showPoweredBy': true,
+                  'className': 'webchatIframe',
+                  'containerWidth': '100%25',
+                  'layoutWidth': '100%25',
+                  'hideWidget': true,
+                  'showCloseButton': false,
+                  'disableAnimations': true,
+                  'closeOnEscape': false,
+                  'showConversationsButton': false,
+                  'enableTranscriptDownload': false,
+                  'stylesheet':'https://webchat-styler-css.botpress.app/prod/code/3fcd3e4e-d5bc-4bf5-8699-14b621b3ada2/v31782/style.css'
+                  
+              });
+            window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+            </script></body>" width="100%" height="100%"></iframe>
 
             </div>
         </div>
     </div>
 
-    <!-- CONTACT -->
 
     <!-- Third popup trigger -->
     <a href="#" class="popup-trigger" data-target="popup-modal-3">
-        <div class="icons-text font" style="top: 360px;"><img src="./Assets/4213462_communication_global_internet_network_web_icon.png" alt="Icon">
+        <div class="icons-text font" style="top: 360px;"><img
+                src="./Assets/4213462_communication_global_internet_network_web_icon.png" alt="Icon">
             <span>Web</span>
         </div>
     </a>
@@ -189,23 +139,25 @@
             <button class="close-btn">&times;</button>
             <h2 class="popup-title">Web</h2>
             <div class="scrollable-content">
-                <div id="wrapper">
-                    <h2 class="font-bold">Got something to say? I'm all ears :) <br> Drop me a message!</h2>
-                    <form id="form" class="topBefore">
-                        <!-- form by Matheus Marsiglio https://codepen.io/matmarsiglio/pen/pojoPR-->
-                        <div class="font" id="warning-message" style="margin-bottom: 16px;"></div>
-                        <input id="name" type="text" placeholder="Enter Name" required>
-                        <input id="email" type="email" placeholder="Enter Email" required>
-                        <textarea id="message" placeholder="Enter Message" required></textarea>
-                        <button id="submit" type="button" onclick="sendMail()">Submit</button>
-                    </form>
+                <h2>Case File: Marc Cash's History of False Testimony Revealed</h2>
+                <h3>www.truthunveiled.com/marc-cash-false-testimony-case-file</h3>
+                <p>Marc Cash's past courtroom deceptions with attached records and transcr...</p>
+                <br>
 
-                </div>
+                <h2>Transcript Exposed: Marc Cash's Testimony Under the Microscope</h2>
+                <h3>www.transcriptexposed.com/marc-cash-false-testimony-transcript</h3>
+                <p>The intricate details of Marc Cash's deceptive testimonies with attached court transcripts...</p>
+                <br>
+
+                <h2>Judicial Journal: Marc Cash's History of False Testimony</h2>
+                <h3>www.judicialjournal.com/marc-cash-false-testimony-legal-archives</h3>
+                <p>Unearthed in Legal Archives to reveal Marc Cash's pattern of false testimonies with attached reco...
+                </p>
+                <br>
             </div>
         </div>
     </div>
 
-    <!-- CV -->
 
     <!-- Forth popup trigger -->
     <a href="#" class="popup-trigger" data-target="popup-modal-4">
