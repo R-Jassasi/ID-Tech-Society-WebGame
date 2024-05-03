@@ -1,26 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => { //fixed why the scrolling didn't work || Check DOM Content Ready: If your script is executed before the DOM is fully loaded, the carousel variable may not reference the correct element.
-
-
-    //horizontal slider from chatGPT
-    const carousel = document.querySelector('.carousel-container');
-    const scrollSpeed = 10; // Adjust scroll speed as needed
-  
-    carousel.addEventListener('mouseenter', () => {
-      carousel.classList.add('smooth-scroll'); // Add smooth scroll class
-    });
-  
-    carousel.addEventListener('mouseleave', () => {
-      carousel.classList.remove('smooth-scroll'); // Remove smooth scroll class
-    });
-  
-    carousel.addEventListener('mousemove', (e) => {
-      const scrollDirection = e.clientX > carousel.offsetWidth / 2 ? 1 : -1;
-      const scrollAmount = scrollDirection * scrollSpeed;
-      carousel.scrollLeft += scrollAmount;
-    });
-  
-  
-  
   
     function startAnimation(e) {
       if (!isAnimating) {
@@ -84,30 +62,6 @@ document.addEventListener('DOMContentLoaded', () => { //fixed why the scrolling 
     });
   }
   
-  
-  //real-time clock from chatGPT
-  function updateClock() {
-    const now = new Date(); // Get the current date and time
-    let hours = now.getHours(); // Get the current hour (0-23)
-    const minutes = now.getMinutes(); // Get the current minute (0-59)
-  
-    // Determine if it's AM or PM
-    const amPm = hours >= 12 ? 'PM' : 'AM';
-  
-    // Convert hours to 12-hour format
-    hours = hours % 12 || 12;
-  
-    // Format the time as HH:MM AM/PM
-    const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${amPm}`;
-  
-    // Update the content of the clock element with the current time
-    document.getElementById('clock').textContent = timeString;
-  }
-  
-  // Call updateClock function every second to update the time
-  setInterval(updateClock, 1000);
-  
-  
   // JavaScript to handle popup functionality - from chatGPT
   document.addEventListener('DOMContentLoaded', function () {
     // Get all popup triggers
@@ -140,61 +94,5 @@ document.addEventListener('DOMContentLoaded', () => { //fixed why the scrolling 
     });
   });
   
+
   
-  //expanding images when clicked - w3schools
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
-  
-  
-  //email contact form submits from email.js https://www.youtube.com/watch?v=dgcYOm8n8ME&ab_channel=CodewithVoran 
-  //with a condition to fill all fields from chatGPT
-  function sendMail() {
-    // Get form field values
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
-  
-    // Get warning message element
-    var warningMessage = document.getElementById("warning-message");
-  
-    // Check if any field is empty
-    if (name === "" || email === "" || message === "") {
-      warningMessage.textContent = "Please fill out all fields.";
-      warningMessage.style.color = "red";
-      return; // Exit function if any field is empty
-    }
-  
-    // Check if email is in valid format
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      warningMessage.textContent = "Please enter a valid email address.";
-      warningMessage.style.color = "red";
-      return; // Exit function if email format is invalid
-    }
-  
-    // If all fields are filled and email format is valid, proceed with sending email
-    var serviceID = "service_exrh0vu";
-    var templateID = "template_rpfnkec";
-  
-    var params = {
-      name: name,
-      email: email,
-      message: message
-    };
-  
-    emailjs.send(serviceID, templateID, params)
-      .then(res => {
-        // Clear form fields after successful submission
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("message").value = "";
-        console.log(res);
-        alert("Your message sent successfully!!");
-        warningMessage.textContent = ""; // Clear warning message
-      })
-      .catch(err => console.log(err));
-  }
