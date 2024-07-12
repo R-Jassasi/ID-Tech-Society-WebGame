@@ -1,7 +1,6 @@
 //tutorials used
 //https://www.youtube.com/watch?v=TAB_v6yBXIE&ab_channel=KevinPowell
 //troubleshooting problems: ChatGPT & Stackoverflow.com 
-//vasic styling: copied from my previous project (personal protfolio for DES). Can be viewed in: rahilaljassasi.com
 
 
 //handiling pop up modal logic for buttons
