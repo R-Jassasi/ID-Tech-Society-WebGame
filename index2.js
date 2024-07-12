@@ -8,9 +8,11 @@
 window.onload = function () {
     const openModal = document.querySelectorAll('[data-modal-target]');
     const closeModal = document.querySelectorAll('[data-close-button]');
-    const openAI = document.querySelector('#aiButton')
-    const notification = document.querySelector('#notification');
-    var alertAudio = new Audio('https://freesound.org/data/previews/254/254316_4062622-lq.mp3');
+    const openAI = document.querySelector('#aiButton');
+    const openEmail = document.querySelector('#emailBtn')
+   
+
+
 
 
 
@@ -36,20 +38,49 @@ window.onload = function () {
         modal1.close();
     })
 
+    //Game START 
     // notification pop up models  https://stackoverflow.com/questions/16836075/timed-alert-box-pop-up-for-website
     setTimeout(function () {
+        const introwindow = document.querySelector('#intro');
+        const startGame = document.querySelector('#startButton')
+        const alertAudio = new Audio('./Assets/level-up-2-199574.mp3');
 
-        alertAudio.play();
+        if (introwindow) {
 
-        notification.showModal();
+            introwindow.showModal();
 
-        // Yes button
-        
+            startGame.addEventListener('click', () => {
+                introwindow.close();
+                let intro = 1; //condition the other pops up after this is closed
 
-        // No button
-        
+                
+                if (intro === 1) {
+                    setTimeout(function () {
+                        const notification = document.querySelector('#notification');
+                        if (notification) {
+                            alertAudio.play();
+                            notification.showModal();
 
-    }, 5000); //show after 5 seconds
+                            //yes
+                            openEmail.addEventListener('click', () => {
+                                modal1.showModal();
+                                notification.close();
+                            })
+
+
+                            //no - close btn in html
+
+                        }
+                    }, 2000); //after 2s
+                }
+            });
+        }
+    }, 100); 
+
+
+
+
+
 
 
 

@@ -36,6 +36,32 @@
         <br>Notes
     </button>
 
+    <!-- Notification Timed popup modal -->
+    <dialog id="intro" class="popup-modal">
+        <div>
+            <div class="window-top">
+                <h2>Hello!</h2>
+            </div>
+            <div>
+
+                <h3>Welcome to Hall Law Cination!</h3>
+                <p>Hall Law Cination is an Educational 2D Web Game that aims to raise awareness about AI overreliance and shed light on the AI Hallucination phenomenon.
+
+                    You are playing as Ms. Sue, a prominent lawyer in the prestigious law firm of Purr, Paw & Law. You are tasked with navigating a complex case involving a prominent entrepreneur facing serious allegations of financial fraud related to his company's business.
+                    
+                    Make the right choices to help your client on time and avoid potential legal pitfalls...
+                    
+                    Good luck, Sue!
+                    
+                    :)</p>
+                <button class="action-btn" id="startButton">START</button>
+
+
+            </div>
+
+        </div>
+    </dialog>
+
 
     <!-- Notification Timed popup modal -->
     <dialog id="notification" class="popup-modal">
@@ -47,8 +73,8 @@
 
                 <h3>New evidence!</h3>
                 <p>You received a new email. It looks urgent, would you like to check it now?</p>
-                <button class="action-btn" id="yesButton">Yes</button>
-                <button class="action-btn" id="noButton">Maybe Later</button>
+                <button class="action-btn" id="emailBtn">Yes</button>
+                <button class="action-btn" data-close-button="">Maybe Later</button>
 
 
             </div>
