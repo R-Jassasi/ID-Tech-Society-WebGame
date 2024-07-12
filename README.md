@@ -1,5 +1,7 @@
-# ID-Tech-Society-WebGame
+# ID-Tech-Society-WebGame 💻⚖🤖
 This is a technical prototype for my Interaction Design 2nd project: 2D Web Game to educate about AI Overreliance
+
+![Boarding](https://github.com/user-attachments/assets/645b1e6c-48fc-44d7-ae20-2aa5d4b94a9c)
 
 Hall Law Cination is an Educational 2D Web Game that aims to raise awareness about AI overreliance and shed light on the AI Hallucination phenomenon.
 
