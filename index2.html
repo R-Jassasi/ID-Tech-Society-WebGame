@@ -7,33 +7,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style2.css">
     <script src="./index2.js"></script>
 </head>
 
 <body>
 
 
-    <!-- BG IMAGE -->
-    <div class="background-image"></div>
+    <!-- Button Modal Openers -->
+
+    <button class="open-button" data-modal-target="#modal1"><img class="icons-text"
+            src="./Assets/134146_mail_email_icon (1).png" alt="Icon">
+        <br>Email
+    </button>
+
+    <button class="open-button" data-modal-target="#modal2"><img class="icons-text"
+            src="./Assets/9054276_bx_bot_icon.png" alt="Icon">
+        <br>AI Bot
+    </button>
+
+    <button class="open-button" data-modal-target="#modal3"><img class="icons-text"
+            src="./Assets/4213462_communication_global_internet_network_web_icon.png" alt="Icon">
+        <br>Web
+    </button>
+
+    <button class="open-button" data-modal-target="#modal4"><img class="icons-text" src="./Assets/9025669_note_icon.png"
+            alt="Icon">
+        <br>Notes
+    </button>
 
 
+    <!-- Notification Timed popup modal -->
+    <dialog id="notification" class="popup-modal">
+        <div>
+            <div class="window-top" style="background-color: #FF2F2F;">
+                <h2>New Notification!</h2>
+            </div>
+            <div>
+
+                <h3>New evidence!</h3>
+                <p>You received a new email. It looks urgent, would you like to check it now?</p>
+                <button class="action-btn" id="yesButton">Yes</button>
+                <button class="action-btn" id="noButton">Maybe Later</button>
 
 
-    <!-- First popup trigger -->
-    <a href="#" class="popup-trigger" >
-        <div class="icons-text font"><img
-                src="./Assets/134146_mail_email_icon (1).png" alt="Icon">
-            <span>Email</span>
+            </div>
+
         </div>
-    </a>
+    </dialog>
+
 
     <!-- First popup modal -->
-    <dialog open id="modal" class="popup-modal">
-        <div class="popup-content">
-            <button class="close-btn">&times;</button>
-            <h2 class="popup-title">Email</h2>
-            <div class="scrollable-content">
+    <dialog id="modal1" class="popup-modal">
+        <div>
+            <div class="window-top">
+                <h2>Email</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <div>
 
                 <h3>New evidence</h3>
                 <p>Hi Ms Sue, <br>
@@ -50,13 +81,110 @@
                     FosIsFrawd Ltd
                 </p>
 
-                <button id="aiButton">Check information through AI Bot</button>
+                <button class="action-btn" id="aiButton">Check information through AI Bot</button>
 
 
             </div>
 
         </div>
     </dialog>
+
+
+
+    <!-- Second popup modal -->
+    <dialog id="modal2" class="popup-modal">
+        <div>
+            <div class="window-top">
+                <h2>AI Bot</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+
+                <!-- Chat bot from botpress.com -->
+
+                <iframe style="border: none; width: 100%; height: 600px;" srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+            <script>
+              window.botpressWebChat.init({
+                  'composerPlaceholder': 'Talk to me...',
+                  'botConversationDescription': 'Purr, Paw & Law AI powered Chat Bot is here to help!',
+                  'botName': 'AI Bot',
+                  'botId': '8c5ad945-0b48-40e0-930c-ca67ebc1352a',
+                  'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                  'messagingUrl': 'https://messaging.botpress.cloud',
+                  'clientId': '8c5ad945-0b48-40e0-930c-ca67ebc1352a',
+                  'enableConversationDeletion': true,
+                  'showPoweredBy': true,
+                  'className': 'webchatIframe',
+                  'containerWidth': '100%25',
+                  'layoutWidth': '100%25',
+                  'hideWidget': true,
+                  'showCloseButton': false,
+                  'disableAnimations': true,
+                  'closeOnEscape': false,
+                  'showConversationsButton': false,
+                  'enableTranscriptDownload': false,
+                  
+              });
+            window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+            </script></body>" width="100%" height="100%"></iframe>
+
+        </div>
+    </dialog>
+
+
+    <!-- Third popup modal -->
+    <dialog id="modal3" class="popup-modal">
+        <div class="popup-content">
+            <div class="window-top">
+                <h2>Web</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <div>
+                <h2>Case File: Marc Cash's History of False Testimony Revealed</h2>
+                <h3>www.truthunveiled.com/marc-cash-false-testimony-case-file</h3>
+                <p>Marc Cash's past courtroom deceptions with attached records and transcr...</p>
+                <br>
+
+                <h2>Transcript Exposed: Marc Cash's Testimony Under the Microscope</h2>
+                <h3>www.transcriptexposed.com/marc-cash-false-testimony-transcript</h3>
+                <p>The intricate details of Marc Cash's deceptive testimonies with attached court transcripts...</p>
+                <br>
+
+                <h2>Judicial Journal: Marc Cash's History of False Testimony</h2>
+                <h3>www.judicialjournal.com/marc-cash-false-testimony-legal-archives</h3>
+                <p>Unearthed in Legal Archives to reveal Marc Cash's pattern of false testimonies with attached reco...
+                </p>
+                <br>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Third popup modal -->
+    <dialog id="modal4" class="popup-modal">
+        <div class="popup-content">
+            <div class="window-top">
+                <h2>Notes</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <div>
+                <h3>Mr Fos Feline’s Fraud Case</h3>
+                <p>Case number: #1051<br>
+                    Client: Fos Feline<br>
+                    Company: FosIsFrwad Ltd<br>
+                </p>
+
+                <p>Mr Fos Feline, owner of FosIsFrwad Ltd, is a prominent entrepreneur facing serious allegations of
+                    financial fraud related to his company business. The accusation involved misleading
+                    investors which led to signing false contracts in some cases, fabricating financial documents and
+                    records, and other accusations to be uncovered. 
+                </p>
+                <p> Findings: ...
+                </p>
+
+            </div>
+        </div>
+    </dialog>
+
+
 
 </body>
 

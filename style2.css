@@ -1,219 +1,102 @@
-textarea {
-    display: block;
-  
-}
+/* Using docs from W3School and googling specific styling for alignment etc */
 
-
-.content {
-    flex: 1;
-    /* Allow the content to grow to fill the remaining space */
-    padding: 20px;
-}
-
-
-
-/*chatGPT*/
-.background-image::before {
-    content: "";
-    position: absolute;
+body {
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background:#013001;
-    /* Adjust the gradient colors and opacity as needed */
-    z-index: 0;
-}
-
-
-
-
-/*______________ Desktop Icons______________*/
-.icons-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: fixed;
-    padding: 10px;
-    right: 20px;
-    /* Adjust the distance from the right edge */
-    top: 20px;
-    /* Adjust the distance from the top edge */
-    width: 100px;
-    /* Adjust the width as needed */
-}
-
-.icons-text-window {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* Allow flex items to wrap to the next line */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-    margin: 15px;
-    width: 100px;
-    /* Adjust the width as needed */
-}
-
-.icons-text:hover {
-    background-color: rgba(115, 221, 177, 0.445);
-}
-
-.icons-text-window:hover {
-    background-color: rgba(115, 221, 177, 0.445);
-}
-
-/* Style the icon */
-.icons-text img {
-    width: 100px;
-    /* Adjust the size of the icon */
-    height: auto;
-    /* Maintain aspect ratio */
-}
-
-.icons-text-window img {
-    width: 100px;
-    /* Adjust the size of the icon */
-    height: auto;
-    /* Maintain aspect ratio */
-}
-
-/* Style the text */
-.icons-text span {
-    margin-top: 10px;
-    /* Adjust spacing between the icon and text */
-    font-size: 20px;
-    /* Adjust font size as needed */
-    color: white;
-}
-
-.icons-text-window span {
-    margin-top: 10px;
-    /* Adjust spacing between the icon and text */
-    font-size: 20px;
-    /* Adjust font size as needed */
-    color: black;
-}
-
-/*wrap contents in the div*/
-.wrapper {
+    background-color: #013001;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    margin: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 2;
 }
 
-
-/*_________________ POP UP WINDOW ______________*/
-
-/* Style for the popup modal - from CHATGPT*/
-.popup-modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    border: 2px solid #000;
-    z-index: 1000;
-    min-width: 30%;
-    max-width: 90%;
-    /* Adjust the maximum width of the popup */
-}
-
-.popup-content {
-    margin-top: -20px;
-    /* Adjust margin to accommodate close button */
-}
-
-.popup-title {
-    padding: 20px 20px 8px 20px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-
-}
-
-.scrollable-content {
-    min-height: 400px;
-    /* Set maximum height for scrollable content */
-    max-height: 650px;
+.open-button {
     padding: 20px;
-    margin-top: -18px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    /* Enable vertical scrolling */
+    font-size: xx-large;
+    color: white;
+    background-color: #013001;
+    border-color: white .3;
+    margin: 70px;
+    width: 10%;
+    text-align: center;
+}
+
+.open-button:hover {
+    background-color: green;
+    border-color: black;
+}
+
+.open-button:active{
+    background-color: #ffffff83;
+}
+
+.icons-text {
+    width: 70px;
 }
 
 .close-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 14px 20px;
-    font-size: 30px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
+    font-size: 50px;
+    width: 60px;
+    background-color: #FF2F2F;
 }
 
 .close-btn:hover {
-    background-color: red;
+    background-color: #960c0c;
     color: white;
-    /* Change color on hover if needed */
 }
 
-/*____________ top bar close ____________*/
-.sticky-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
+.action-btn{
+    padding: 10px;
+    font-size:large;
+    color: white;
+    background-color: #4CAF50;
+    text-align: center;
+}
+
+.action-btn:hover{
+    background-color: #0e6911;
+
+}
+
+.action-btn:active{
+    background-color: #022203;
+
+}
+
+
+.popup-modal {
+    background-color: #fff;
+    border: 2px solid #000;
+    min-width: 30%;
+    max-width: 30%;
+}
+
+dialog{
+    margin: auto;
+    padding: 10px;
+}
+
+dialog::backdrop{
+    background-color: #0130018e;
+}
+
+.window-top{
+    background-color: #09773C;
     width: 100%;
-    /*glass effect instead of a solid black colour*/
-    backdrop-filter: blur(4px) saturate(200%);
-    -webkit-backdrop-filter: blur(4px) saturate(200%);
-    background-color: rgba(0, 0, 0, 0.708);
-    border: 1px solid rgba(255, 255, 255, 0.125);
-
-    padding: 10px 10px 8px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
     display: flex;
-    align-items: center;
-    z-index: 1000;
-    /* Ensure it's above the header image */
-
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-.close-btn2 {
-    position: fixed;
-    top: 0px;
-    /* Adjust as needed to position the button vertically */
-    right: 30px;
-    /* Adjust as needed to position the button horizontally */
-    padding: 9px 20px;
-    font-size: 30px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    /* Ensure the button is above the scrollbar */
-}
-
-
-/* Adjust the hover effect if needed */
-.close-btn2:hover {
-    background-color: red;
+.window-top h2{
     color: white;
 }
 
-.title {
-    flex-grow: 1;
-    font-size: 30px;
-    color: white;
+h2{
+    color: green;
+    padding-left: 10px;
+    margin-bottom: -5px;
 }
-
